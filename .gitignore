@@ -1,0 +1,9 @@
+node_modules/
+data/bridgers.db
+data/*.db
+.DS_Store
+*.log
+.env
+.env.local
+dist/
+build/

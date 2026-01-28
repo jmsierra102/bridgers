@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Bridgers Youth Organization</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="images/logo.svg" alt="Bridgers Logo" style="height: 30px; width: auto;">
+            </a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/events">Events</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/shop">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Title -->
+    <section style="background: linear-gradient(135deg, #1a2332, #2c3e50); color: white; padding: 4rem 2rem; text-align: center;">
+        <h1 style="font-size: 3rem; margin-bottom: 1rem;">Your Cart</h1>
+    </section>
+
+    <!-- Cart -->
+    <section>
+        <div class="cart-container">
+            <div class="cart-items" id="cart-items">
+                <p style="padding: 2rem; text-align: center; color: #999;">Your cart is empty. <a href="/shop">Continue shopping</a></p>
+            </div>
+
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="shipping">Free</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="total">$0.00</span>
+                </div>
+
+                <div style="margin-top: 2rem; display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <a href="/shop" class="btn" style="text-align: center;">Continue Shopping</a>
+                    <a href="/checkout" class="btn btn-primary" style="text-align: center;">Proceed to Checkout</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #000000; color: white; padding: 3rem 2rem; text-align: center;">
+        <p>&copy; 2025 Bridgers Youth Organization. All rights reserved.</p>
+    </footer>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>

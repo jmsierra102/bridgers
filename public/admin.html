@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Bridgers Youth Organization</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="/" class="logo">
+                <img src="images/logo.svg" alt="Bridgers Logo" style="height: 30px; width: auto;">
+            </a>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="/shop">Shop</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Admin Dashboard -->
+    <div class="admin-container" style="margin-top: 2rem; margin-bottom: 2rem;">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+            <h3 style="margin-bottom: 2rem; color: white;">Admin Menu</h3>
+            <ul>
+                <li><a href="#" class="admin-nav-link active" data-section="dashboard">Dashboard</a></li>
+                <li><a href="#" class="admin-nav-link" data-section="orders">Orders</a></li>
+                <li><a href="#" class="admin-nav-link" data-section="products">Products</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="admin-content">
+            <!-- Dashboard Section -->
+            <div id="dashboard-section" class="admin-section active">
+                <h2 style="margin-bottom: 2rem; color: #1a2332;">Dashboard</h2>
+
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-value" id="kpi-revenue">$0</div>
+                        <div class="kpi-label">Total Revenue</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" id="kpi-orders">0</div>
+                        <div class="kpi-label">Total Orders</div>
+                    </div>
+                    <div class="kpi-card">
+                        <div class="kpi-value" id="kpi-avg-order">$0</div>
+                        <div class="kpi-label">Average Order Value</div>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h3 style="margin-bottom: 1.5rem; color: #1a2332;">Top Selling Items</h3>
+                        <div id="top-products" style="font-size: 0.9rem;">
+                            <!-- Will be populated -->
+                        </div>
+                    </div>
+
+                    <div style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                        <h3 style="margin-bottom: 1.5rem; color: #1a2332;">Size Preferences</h3>
+                        <div id="size-popularity" style="font-size: 0.9rem;">
+                            <!-- Will be populated -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Orders Section -->
+            <div id="orders-section" class="admin-section" style="display: none;">
+                <h2 style="margin-bottom: 2rem; color: #1a2332;">Orders</h2>
+                <div style="background: white; border-radius: 8px; overflow: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead style="background: #f9f9f9;">
+                            <tr>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 1px solid #ddd;">Order #</th>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 1px solid #ddd;">Customer</th>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 1px solid #ddd;">Amount</th>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 1px solid #ddd;">Status</th>
+                                <th style="padding: 1rem; text-align: left; border-bottom: 1px solid #ddd;">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orders-table">
+                            <tr>
+                                <td colspan="5" style="padding: 2rem; text-align: center; color: #999;">Loading orders...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Products Section -->
+            <div id="products-section" class="admin-section" style="display: none;">
+                <h2 style="margin-bottom: 2rem; color: #1a2332;">Products</h2>
+                <p style="color: #666; padding: 2rem; text-align: center;">Product management coming soon.</p>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background-color: #000000; color: white; padding: 3rem 2rem; text-align: center;">
+        <p>&copy; 2025 Bridgers Youth Organization. All rights reserved.</p>
+    </footer>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
