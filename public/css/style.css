@@ -74,6 +74,8 @@ nav a:hover {
 .hero {
   position: relative;
   height: 600px;
+  width: 100%;
+  padding: 0;
   background: linear-gradient(rgba(26, 35, 50, 0.5), rgba(26, 35, 50, 0.5)), 
               url('images/hero-bg.jpg') center/cover;
   display: flex;
