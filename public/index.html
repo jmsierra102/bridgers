@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bridgers Youth Organization - Bridging Communities, Building Futures</title>
+    <title>Bridgers</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
         html {
@@ -13,6 +13,34 @@
             scroll-margin-top: 70px;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const closeMenu = document.querySelector('.close-menu');
+            const mobileMenuLinks = document.querySelectorAll('.mobile-menu-link');
+
+            // Open menu
+            hamburger.addEventListener('click', function() {
+                hamburger.classList.add('active');
+                mobileMenu.classList.add('active');
+            });
+
+            // Close menu
+            closeMenu.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+
+            // Close menu when link is clicked
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -21,14 +49,39 @@
             <a href="#home" class="logo">
                 <img src="images/logo.svg" alt="Bridgers Logo" style="height: 30px; width: auto;">
             </a>
-            <ul>
+            <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#shop">Shop</a></li>
             </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
+        <!-- Mobile Sidebar Menu -->
+        <div class="mobile-menu">
+            <div class="mobile-menu-header">
+                <a href="#home" class="mobile-logo">
+                    <img src="images/logo.svg" alt="Bridgers Logo" style="height: 25px; width: auto;">
+                </a>
+                <button class="close-menu">✕</button>
+            </div>
+            <div class="mobile-menu-content">
+                <a href="#home" class="mobile-menu-link">Home</a>
+                <a href="#about" class="mobile-menu-link">About</a>
+                <a href="#events" class="mobile-menu-link">Events</a>
+                <a href="#contact" class="mobile-menu-link">Contact</a>
+                <a href="#shop" class="mobile-menu-link">Shop</a>
+            </div>
+            <div class="mobile-menu-footer">
+                <a href="#contact">Help</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
     </header>
 
     <!-- HOME SECTION -->
