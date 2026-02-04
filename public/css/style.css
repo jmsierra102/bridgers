@@ -62,6 +62,12 @@ nav ul {
   gap: 2rem;
 }
 
+.nav-menu {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 /* Hamburger Menu Button */
 .hamburger {
   display: none;
